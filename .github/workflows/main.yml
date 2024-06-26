@@ -10,10 +10,12 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
-          python-version: 3.x
+          python-version: 3.10
       - name: Install dependencies
         run: |
           pip install notebook
+          pip install matplotlib
+          pip install seaborn
           pip install plotly  # Install any additional libraries needed
       - name: Run notebook and export HTML
         run: >
